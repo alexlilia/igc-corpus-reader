@@ -1,0 +1,15 @@
+import os, os.path, sys
+from pathlib import Path
+import glob
+from xml.etree import ElementTree
+
+def run(files):
+    xml_files = list(map(str,Path(files).rglob('*.xml')))
+    #xml_element_tree = None
+    #parser = ElementTree.XMLParser(encoding='utf-8')
+    for xml_file in xml_files:
+        data = ElementTree.fromstring(open(xml_file,encoding='utf-8').read())
+        for w in data.iter('{http://www.tei-c.org/ns/1.0}w'):
+            print(w.text)
+            print(w.attrib)
+run('F:\\Academics\\PhD\\Icelandic\\MalfongCorpus')
