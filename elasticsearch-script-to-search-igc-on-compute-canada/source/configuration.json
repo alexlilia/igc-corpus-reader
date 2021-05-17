@@ -3,8 +3,5 @@
     "FOLDER_NAME1": "IGC1.20.05.zip",
     "FOLDER_NAME2": "IGC2.20.05.zip",
     "LANG_ID": "isk",
-    "WINDOW_SIZE": 5,
-    "TEST_FOLDER": "../data/test",
-    "TEST_FILE": "covid_less.json",
-    "MODE": "user"
+    "WINDOW_SIZE": 5
 }
