@@ -18,7 +18,7 @@ class CorpusReader():
     Retrieve instances from the index fast
     """
 
-    def __init__(self, DATA_PATH, ZIPFILE_NAME, NUM_OF_SAMPLES=500):
+    def __init__(self, DATA_PATH, ZIPFILE_NAME):
         """
         Initial function which get the information of this corpus and set up an Elasticsearch instance.
 
@@ -31,7 +31,7 @@ class CorpusReader():
         """
         self.data_path = DATA_PATH
         self.zipfile_name = ZIPFILE_NAME
-        self.num_of_samples = NUM_OF_SAMPLES
+        # self.num_of_samples = NUM_OF_SAMPLES
         self.root = ''
         self.corpus_id = ''
         self.corpus_lang = ''
@@ -48,10 +48,8 @@ class CorpusReader():
             with zip_file.open(os.path.join(self.root, 'corpus.json'), 'r') as f:
                 corpus_info = json.load(f)
                 corpus_id = corpus_info['id']
-                if corpus_info['languages'][0] == 'fr-FR':
-                    self.corpus_lang = 'french'
-                else:
-                    self.corpus_lang = 'english'
+                if corpus_info['languages'][0] == 'isk':
+                    self.corpus_lang = 'icelandic'
 
             # get annotation files information
             with zip_file.open(os.path.join(self.root, 'CorpusStructure.json'), 'r') as f:
@@ -65,7 +63,7 @@ class CorpusReader():
         # get all documents' name(id)
         documents_ids = []
         for filename in filenames:
-            if filename.startswith(os.path.join(self.root, 'document')) and filename.endswith('.json'):
+            if filename.startswith(os.path.join(self.root, 'document')) and filename.endswith('.xml'):
                 documents_ids.append(filename.split('/')[-1][:-5])
 
         self.corpus_id = corpus_id
@@ -101,10 +99,10 @@ class CorpusReader():
         for r in results:
             filtered_doc_ids.append(r['_source']['id'])
 
-        # randomly pick N documents if it exceeds NUM_OF_SAMPLES
-        if self.num_of_samples != -1 and len(filtered_doc_ids) > self.num_of_samples:
-            # randomly sample N instances from them
-            filtered_doc_ids = random.sample(filtered_doc_ids, self.num_of_samples)
+        # # randomly pick N documents if it exceeds NUM_OF_SAMPLES
+        # if self.num_of_samples != -1 and len(filtered_doc_ids) > self.num_of_samples:
+        #     # randomly sample N instances from them
+        #     filtered_doc_ids = random.sample(filtered_doc_ids, self.num_of_samples)
 
         return filtered_doc_ids
 
@@ -142,17 +140,17 @@ class CorpusReader():
                                 instances.append((left_context, target, right_context))
                 except:
                     continue
-        if self.num_of_samples != -1 and len(instances) > self.num_of_samples:
-            return random.sample(instances, self.num_of_samples)
+        # if self.num_of_samples != -1 and len(instances) > self.num_of_samples:
+            # return random.sample(instances, self.num_of_samples)
         return instances
 
 
 if __name__ == "__main__":
     # Datasets Names: assnat_slim, covid_slim, assnat, covid
-    DATA_PATH = '../incoming'
-    FOLDER_NAME = 'assnat_slim.zip'
+    DATA_PATH = '../data'
+    FOLDER_NAME = 'Gigaword.zip'
 
-    reader = CorpusReader(DATA_PATH, FOLDER_NAME, NUM_OF_SAMPLES=200)
+    reader = CorpusReader(DATA_PATH, FOLDER_NAME)
     instances = reader.search("and")
 
     for i in instances:

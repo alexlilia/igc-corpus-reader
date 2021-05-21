@@ -35,7 +35,6 @@ def etree_to_dict(t):
                         sentences.append(get_words(sss["ns0:w"]))
                 else:
                     sentences.append(get_words(ss['ns0:s']["ns0:w"]))
-#    return {"text":" ".join([" ".join(s) for s in sentences])}
     return [{"text":" ".join(s)} for s in sentences]
 
 def build_elasticsearch(data_path):
@@ -56,7 +55,7 @@ def build_elasticsearch(data_path):
             documents_ids = []
             for filename in filenames:
                 if filename.endswith('.xml'):
-                    documents_ids.append(filename.split('/')[-1][:-4] + "@0")
+                    documents_ids.append(filename.split('/')[-1][:-4])
         done_list = []
         todo_path = os.path.join('bin', fn + '_todo.json')
         done_path = os.path.join('bin', fn + '_done.json')
