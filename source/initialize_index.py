@@ -110,9 +110,9 @@ def build_elasticsearch(data_path):
                 with zip_file.open(doc_path, 'r') as f:
                     doc = ElementTree.fromstring(f.read())
                     doc = etree_to_dict(doc)
-                    if not es.exists(index="bin",id=doc_id) and doc:
-                        for i, s in enumerate(doc):
-                            id = "%s@%u" % (doc_id,i)
+                    for i, s in enumerate(doc):
+                        id = "%s@%u" % (doc_id,i)
+                        if not es.exists(index="bin",id=id):
                             es.create(index="bin",id=id, body=s)
                             print("Created %s" % id)
                             done_list.append(id)
