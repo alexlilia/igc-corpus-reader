@@ -1,7 +1,6 @@
 {
     "DATA_PATH": "../data",
-    "FOLDER_NAME1": "IGC1.20.05.zip",
-    "FOLDER_NAME2": "IGC2.20.05.zip",
-    "LANG_ID": "isk",
+    "FOLDER_NAME1": "Gigaword.zip",
+    "LANG_ID": "is",
     "WINDOW_SIZE": 5
 }
