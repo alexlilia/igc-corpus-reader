@@ -106,16 +106,19 @@ def build_elasticsearch(data_path):
         with ZipFile(os.path.join(data_path, fn), 'r') as zip_file:
             for i in tqdm(range(len(documents_ids))):
                 doc_id = documents_ids[i]
-                doc_path = os.path.join(root, "CC_BY", "althingi", "1911", "02", doc_id + '.xml')
-                with zip_file.open(doc_path, 'r') as f:
-                    doc = ElementTree.fromstring(f.read())
-                    doc = etree_to_dict(doc)
-                    for i, s in enumerate(doc):
-                        id = "%s@%u" % (doc_id,i)
-                        if not es.exists(index="bin",id=id):
-                            es.create(index="bin",id=id, body=s)
-                            print("Created %s" % id)
-                            done_list.append(id)
+                for root, dirs, files in os.walk("[^\.].xml$"):
+                    paths = root.split(os.sep)
+                    for path in paths:
+                        doc_path = os.path.join(path, doc_id + '.xml')
+                        with zip_file.open(doc_path, 'r') as f:
+                            doc = ElementTree.fromstring(f.read())
+                            doc = etree_to_dict(doc)
+                            for i, s in enumerate(doc):
+                                id = "%s@%u" % (doc_id,i)
+                                if not es.exists(index="bin",id=id):
+                                    es.create(index="bin",id=id, body=s)
+                                    print("Created %s" % id)
+                                    done_list.append(id)
 
         # If done, update the status of the done json file
         with open(done_path, 'w') as f:
