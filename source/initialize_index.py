@@ -1,4 +1,6 @@
 import os
+from pathlib import Path
+import glob
 import xml, json
 from zipfile import ZipFile
 from elasticsearch import Elasticsearch
@@ -56,6 +58,7 @@ def build_elasticsearch(data_path):
             for filename in filenames:
                 if filename.endswith('.xml'):
                     documents_ids.append(filename.split('/')[-1][:-4])
+        
         done_list = []
         todo_path = os.path.join('bin', fn + '_todo.json')
         done_path = os.path.join('bin', fn + '_done.json')
@@ -104,21 +107,25 @@ def build_elasticsearch(data_path):
 
         # iterate all documents and create an index for each document
         with ZipFile(os.path.join(data_path, fn), 'r') as zip_file:
-            for i in tqdm(range(len(documents_ids))):
+            for i, doc_path in zip(tqdm(range(len(documents_ids))), zip_file.namelist()):
                 doc_id = documents_ids[i]
-                for root, dirs, files in os.walk("[^\.].xml$"):
-                    paths = root.split(os.sep)
-                    for path in paths:
-                        doc_path = os.path.join(path, doc_id + '.xml')
-                        with zip_file.open(doc_path, 'r') as f:
-                            doc = ElementTree.fromstring(f.read())
-                            doc = etree_to_dict(doc)
-                            for i, s in enumerate(doc):
-                                id = "%s@%u" % (doc_id,i)
-                                if not es.exists(index="bin",id=id):
-                                    es.create(index="bin",id=id, body=s)
-                                    print("Created %s" % id)
-                                    done_list.append(id)
+                # paths = root.split(os.sep)
+                # for path in paths:
+                # print(name)
+                if (not doc_path.startswith("_")) and doc_path.endswith("xml"):
+                    name = doc_path
+                    # print(name)
+                # doc_path = os.path.join(data_path, path, doc_id + '.xml')
+        
+                    with zip_file.open(name, 'r') as f:
+                        doc = ElementTree.fromstring(f.read())
+                        doc = etree_to_dict(doc)
+                        for i, s in enumerate(doc):
+                            id = "%s@%u" % (doc_id,i)
+                            if not es.exists(index="bin",id=id):
+                                es.create(index="bin",id=id, body=s)
+                                print("Created %s" % id)
+                                done_list.append(id)
 
         # If done, update the status of the done json file
         with open(done_path, 'w') as f:
@@ -127,16 +134,16 @@ def build_elasticsearch(data_path):
 
         print("Done!")
 
-        print(es.get(id="R-33-4941691@0",index="bin"))
+        # print(es.get(id="R-33-4941691@0",index="bin"))
 
-        query = "hafa%ssþghen" % SEP
-        print("Query",query)
-        dsl = {"query": {"regexp": { "text": ".*%s.*" % query }}}
+        # query = "hafa%ssþghen" % SEP
+        # print("Query",query)
+        # dsl = {"query": {"regexp": { "text": ".*%s.*" % query }}}
 
-        res = es.search(dsl,index="bin")
-        print("Got %d Hits:" % res['hits']['total']['value'])
-        for hit in res['hits']['hits']:
-            print(hit["_source"])
+        # res = es.search(dsl,index="bin")
+        # print("Got %d Hits:" % res['hits']['total']['value'])
+        # for hit in res['hits']['hits']:
+        #     print(hit["_source"])
 
 
 if __name__ == "__main__":
@@ -144,5 +151,3 @@ if __name__ == "__main__":
     DATA_PATH = '../data'
     
     build_elasticsearch(data_path=DATA_PATH)
-
-
