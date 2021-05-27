@@ -45,10 +45,11 @@ def build_elasticsearch(data_path):
         
         with ZipFile(os.path.join(data_path,fn),'r') as zip_file:
             filenames = zip_file.namelist()
-            root = filenames[0]
+            corpus_json = [fn for fn in filenames 
+                           if "corpus.json" in fn][0] 
 
         # get corpus id and what is the language used in this corpus, support English and French for now
-            with zip_file.open(os.path.join(root, 'corpus.json'), 'r') as f:
+            with zip_file.open(corpus_json, 'r') as f:
                 corpus_info = json.load(f)
                 corpus_id = corpus_info['id']
                 corpus_lang = 'icelandic'
@@ -120,6 +121,7 @@ def build_elasticsearch(data_path):
                     with zip_file.open(name, 'r') as f:
                         doc = ElementTree.fromstring(f.read())
                         doc = etree_to_dict(doc)
+                        print("SENTENCES:",len(doc))
                         for i, s in enumerate(doc):
                             id = "%s@%u" % (doc_id,i)
                             if not es.exists(index="bin",id=id):
@@ -134,20 +136,12 @@ def build_elasticsearch(data_path):
 
         print("Done!")
 
-        # print(es.get(id="R-33-4941691@0",index="bin"))
-
-        # query = "hafa%ssþghen" % SEP
-        # print("Query",query)
-        # dsl = {"query": {"regexp": { "text": ".*%s.*" % query }}}
-
-        # res = es.search(dsl,index="bin")
-        # print("Got %d Hits:" % res['hits']['total']['value'])
-        # for hit in res['hits']['hits']:
-        #     print(hit["_source"])
-
-
 if __name__ == "__main__":
     
-    DATA_PATH = '../data'
+    DATA_PATH = 'data'
     
     build_elasticsearch(data_path=DATA_PATH)
+
+
+
+
