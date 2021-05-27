@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mimDoc>
+  <teiHeader type="corpus">
+    <fileDesc>
+      <titleStmt>
+        <title xml:lang="is">Risamálheild fyrri hluti(RMH1)</title>
+        <title xml:lang="en">The Icelandic Gigaword Corpus Part 1 (IGC1)</title>
+        <respStmt>
+          <resp xml:lang="is">Söfnun og úrvinnsla texta</resp>
+          <resp xml:lang="en">Collection and processing of text</resp>
+          <orgName xml:lang="is">Stofnun Árna Magnússonar í íslenskum fræðum</orgName>
+          <orgName xml:lang="en">The Arni Magnusson Institute for Icelandic Studies</orgName>
+        </respStmt>
+      </titleStmt>
+      <editionStmt>
+        <edition xml:lang="is">Útgáfa 2019.06</edition>
+        <edition xml:lang="en">Version 2019.06</edition>
+      </editionStmt>
+      <publicationStmt>
+        <pubPlace>Reykjavik, Iceland</pubPlace>
+        <address>
+          <addrLine lang="en">Árnagarði við Suðurgötu, 101 Reykjavik, Iceland</addrLine>
+          <addrLine>
+            <email>arnastofnun@arnastofnun.is</email>
+          </addrLine>
+          <addrLine>
+            <ref n="www" target="http://arnastofnun.is">http://arnastofnun.is</ref>
+          </addrLine>
+        </address>
+        <publisher lang="is">Stofnun Árna Magnússonar í íslenskum fræðum</publisher>
+        <publisher lang="en">The Arni Magnusson Institute for Icelandic Studies</publisher>
+        <distributor lang="is">Stofnun Árna Magnússonar í íslenskum fræðum</distributor>
+        <distributor lang="en">The Arni Magnusson Institute for Icelandic Studies</distributor>
+        <availability lang="is" xml:id="LEYFI">Þessi hluti Risamálheildarinnar er til notkunar í málrannsóknum og máltækniverkefnum um allan heim með sérstöku leyfi, sem birt er hér að neðan:<para lang="is">Notkunarleyfi fyrir Risamálheild fyrri hluta: <i>Stofnun Árna Magnússonar í íslenskum fræðum</i> (hér eftir oft nefnd rekstraraðili) veitir hér með leyfishafa leyfi til þess að nota <i>Risamálheildina fyrri hluta</i> (<i>(RMH1)</i>) í samræmi við eftirfarandi skilmála.<list>
+              <label>0 Skilgreiningar<item>
+                  <para>a. <i>Texti</i> er samfellt mál í tölvutæku formi sem er valið til notkunar í rannsóknum og við þróun máltæknibúnaðar.</para>
+                  <para>b. <i>RMH1</i> er safn valinna texta þegar þeim hefur verið komið í samræmt tölvutækt form og þeir greindir á málfræðilegan hátt.</para>
+                  <para>c. <i>Niðurstöður leyfishafa</i> er afrakstur vinnu sem leyfishafi hefur unnið á textum í <i>RMH1</i>.</para>
+                </item>
+              </label>
+              <label>1 Inngangur<item>
+                  <para><i>Stofnun Árna Magnússonar í íslenskum fræðum</i> er umsjónaraðili <i>RMH1</i>.</para>
+                  <para><i>Stofnun Árna Magnússonar í íslenskum fræðum</i> hefur samið við rétthafa um að textar úr verkum þeirra séu hluti af <i>RMH1</i>. Rétthafar textanna hafa með sérstakri yfirlýsingu heimilað rekstraraðila að veita leyfishafa leyfi til þess að nota textana eins og lýst er hér á eftir.</para>
+                  <para>Leyfishafi er notandi textanna eins og lýst er í samningi þessum. Á vegum leyfishafa getur starfað hópur rannsóknarmanna við háskóla eða í fyrirtæki.</para>
+                </item>
+              </label>
+              <label>2 Skilmálar<item>
+                  <para>a. Rekstraraðili veitir leyfishafa óframseljanlegt leyfi til þess að nota <i>RMH1</i> í málfræðilegum rannsóknum, í rannsóknum í máltækni og við þróun máltæknibúnaðar. Leyfi þetta felur ekki í sér einkarétt til notkunar á  málheildinni.</para>
+                  <para>b. Aðgangur leyfishafa að <i>RMH1</i> samkvæmt notkunarleyfi þessu takmarkast við rannsóknarhóp leyfishafa. Með rannsóknarhópi leyfishafa er átt við starfsmenn leyfishafa, verktaka eða aðra samstarfsaðila sem leyfishafi hefur veitt heimild til þess að vinna að rannsóknum, sbr. 2. grein, lið a), með aðstoð <i>RMH1</i>.</para>
+                  <para>c. <i>RMH1</i> má setja upp á starfsstöð eða starfsstöðvum rannsóknarhópsins. Með starfsstöð er átt við útstöð vélbúnaðar eða lokað netkerfi sem félagar í rannsóknarhópnum nota venjulega við vinnu sína. Þar getur bæði verið um að ræða búnað á vinnustað og heimili starfsmanna og leyfið er ekki takmarkað við tiltekinn vélbúnað eða byggingu.</para>
+                  <para>d. Taka má öryggisafrit af <i>RMH1</i> og einnig má búa til afrit fyrir félaga í rannsóknarhópnum. Leyfishafi skal sjá til þess að öllum afritum af málheildinni, hvort sem um ræðir afrit í heild eða að hluta, fylgi áskilnaður um höfundarrétt sbr. 5. grein, lið d) í notkunarleyfi þessu.</para>
+                  <para>e. Ekki má gefa út, birta, miðla til almennings eða veita þriðja aðila á annan hátt aðgang að <i>RMH1</i> í heild eða að hluta. Ekki má heldur afrita <i>RMH1</i> umfram það sem greint er í c) og d) lið þessarar greinar. Það er á ábyrgð leyfishafa að sjá til þess að starfsmenn hans skilji og fari eftir þessum skilmálum og hafa umsjón með notkun þeirra á <i>RMH1</i>.</para>
+                  <para>f. Hvorki leyfishafi né rannsóknarhópur hans mega leigja út eða selja <i>RMH1</i>, taka á annan hátt gjald fyrir afnot af málheildinni eða framselja notkunarleyfið.</para>
+                  <para>g. Leyfishafi getur notað niðurstöður sínar að vild. Leyfishafa er þó ekki heimilt að gefa út á prenti eða í rafrænu formi, birta, miðla til almennings eða hagnýta á annan hátt í atvinnu- eða hagnaðarskyni texta úr <i>RMH1</i> umfram það sem heimilað er í 14. gr. höfundalaga nr. 73/1972 og skal þá ætíð geta heimildar.</para>
+                  <para>h. Við útgáfu eða annars konar birtingu eða miðlun til almennings sem heimil er á grundvelli g) liðar þessarar greinar skal þess gætt að virtur sé í hvívetna sæmdarréttur höfundar texta, sbr. 4. gr. höfundalaga nr. 73/1972, og að ekki komi fram persónugreinanlegar upplýsingar um þriðja aðila í því sem birt er.</para>
+                  <para>i. Þegar birtar eru niðurstöður rannsókna sem gerðar eru með aðstoð <i>RMH1</i> skal hennar getið sem heimildar<footnote label="1">Risamálheild (RMH1). Verkefnisstjórn: Eiríkur Rögnvaldsson, Sigrún Helgadóttir og Steinþór Steingrímsson. Stofnun Árna Magnússonar í íslenskum fræðum. Sótt [Dags.] af http://www.malfong.is/index.php?pg=rmh.</footnote>. Hið sama gildir við útgáfu máltæknibúnaðar þar sem <i>RMH1</i> hefur verið nýtt.</para>
+                </item>
+              </label>
+              <label>3 Greiðsla<item>
+                  <para>Ekkert gjald er tekið fyrir afnot af <i>RMH1</i>.</para>
+                </item>
+              </label>
+              <label>4 Gildistími leyfis<item>
+                  <para>Haldi leyfishafi skilmála þessa leyfis er gildistími leyfisins ótakmarkaður. Leyfinu má þó segja upp með heimild í 8. gr ef leyfishafi gengur gegn ákvæðum samnings þessa.</para>
+                </item>
+              </label>
+              <label>5 Skyldur leyfishafa<item>
+                  <para>Leyfishafi og allir í rannsóknarhópi hans skulu ætíð viðhafa fyllstu varúðarráðstafanir til þess að fullnægja ákvæðum samnings þessa og skulu m.a.:</para>
+                  <para>a. Halda skrá um öll afrit af <i>RMH1</i> sem eru búin til og um þá einstaklinga í rannsóknarhópi leyfishafa sem hafa aðgang að málheildinni hverju sinni. Einnig skal skráð hvar slík afrit eru geymd. Jafnframt skal haldin skrá um verkefni á vegum leyfishafa þar sem <i>RMH1</i> er notuð. Leyfishafi lætur rekstraraðila í té þessar skrár án tafar sé þess óskað.</para>
+                  <para>b. Fylgjast reglulega með notkun <i>RMH1</i> þ.á m. að uppfæra eftir þörfum skrár samkvæmt a) lið.</para>
+                  <para>c. Viðhafa viðeigandi öryggisráðstafanir til þess að koma í veg fyrir að óviðkomandi geti fengið aðgang að skrám málheildarinnar. Aðgangur leyfishafa og einstaklinga í rannsóknarhópi hans að <i>RMH1</i> skal aðeins heimill með notkun aðgangsorðs sem hann úthlutar viðkomandi einstaklingi og óheimilt er að láta óviðkomandi í té.</para>
+                  <para>d. Gera aðrar nauðsynlegar ráðstafanir til þess að vernda höfundarrétt og önnur réttindi á sviði hugverka- og auðkennaréttar í eigu <i>Stofnunar Árna Magnússonar í íslenskum fræðum</i> og rétthafa texta í <i>RMH1</i>.</para>
+                  <para>e. Ef grunur vaknar hjá leyfishafa um að starfsmenn hans, aðilar í rannsóknarhópi hans eða samstarfsaðilar hafi brotið gegn skilmálum þessum eða misfarið með aðgang að <i>RMH1</i> skal hann þegar í stað tilkynna það til rekstraraðila.</para>
+                  <para>Leyfishafi skal sjá til þess, m.a. með samningum við aðila í rannsóknarhópi sínum, hvort sem um ræðir starfsmenn, verktaka eða aðra samstarfsaðila, að þeir framfylgi þeim öryggisráðstöfunum sem tilgreindar eru í c) lið og öðrum ráðstöfunum er hann kann að mæla fyrir um og að þegar vinnu við rannsóknarverkefni lýkur sé eytt öllum afritum þeirra af <i>RMH1</i>. Starfsmaður leyfishafa, sem hefur til þess umboð, skal senda rekstraraðila skriflega staðfestingu á að leyfishafi hafi fullnægt þessu skilyrði.</para>
+                  <para>Leyfishafi skal sjá til þess að aðrir en þeir sem vinna við verkefni rannsóknarhópsins á hverjum tíma hafi ekki aðgang að málheildinni.</para>
+                </item>
+              </label>
+              <label>6 Takmörkun ábyrgðar<item>
+                  <para>a. Rekstraraðili ábyrgist ekki að <i>RMH1</i> henti fyrir tiltekna notkun eða sé til nota við tilteknar aðstæður jafnvel þótt honum hafi áður verið kynntar áætlanir leyfishafa.</para>
+                  <para>b. Rekstraraðili ber ekki ábyrgð á tæknilegum eiginleikum eða takmörkunum <i>RMH1</i>.</para>
+                  <para>c. Rekstraraðili ábyrgist ekki að hugbúnaður sem kann að vera dreift með <i>RMH1</i> starfi án truflana og án þess að villur komi fyrir.</para>
+                  <para>d. Rekstraraðili mun ekki undir neinum kringumstæðum bera ábyrgð gagnvart leyfishafa á fjárhagslegu tapi, tapi á viðskiptavild eða öðru óbeinu tjóni jafnvel þótt það hafi verið fyrirsjáanlegt.</para>
+                  <para>e. Rekstraraðili ber ekki ábyrgð á skemmdum sem kunna að verða á eignum leyfishafa hvort sem þær kynnu að vera afleiðing af vanrækslu rekstraraðila, starfsmanna hans, umboðsmanna eða undirverktaka, eða af öðrum ástæðum.</para>
+                </item>
+              </label>
+              <label>7 Réttur rétthafa<item>
+                  <para>Öll réttindi á sviði hugverka- og auðkennaréttar, m.a. höfundarréttur, sem tengjast <i>RMH1</i>, haldast á hendi rétthafa textanna og <i>Stofnunar Árna Magnússonar í íslenskum fræðum</i>.</para>
+                </item>
+              </label>
+              <label>8 Uppsagnarákvæði<item>
+                  <para>a. Rekstraraðili getur fellt leyfið úr gildi með skriflegri tilkynningu án sérstakrar viðvörunar ef leyfishafi gengur gegn ákvæðum samnings þessa.</para>
+                  <para>b. Leyfið fellur sjálfkrafa úr gildi ef bú leyfishafa er tekið til gjaldþrotaskipta.</para>
+                </item>
+              </label>
+              <label>9 Ágreiningsmál<item>
+                  <para>Verði ágreiningur um samning þennan og náist ekki samkomulag milli aðila skulu slík mál rekin fyrir Héraðsdómi Reykjavíkur.</para>
+                </item>
+              </label>
+            </list>
+          </para>
+        </availability>
+        <availability lang="en" xml:id="LICENSE">This part of The Icelandic Giaword Corpus is available for use in language research and language technology projects world wide with a special license, which is the following:<para lang="en">User License for The Icelandic Gigaword Corpus Part 1: <i>The Árni Magnússon Institute for Icelandic Studies</i>  (hereinafter termed Operator) hereby gives the Licensee the permission to use <i>The Icelandic Gigaword Corpus Part 1</i> (hereinafter termed <i>IGC1</i>) in accordance with the following terms.
+          <list>
+              <label>0 Definitions<item>
+                  <para>a. <i>Text </i>is a text in digital form, selected for use in research and the development of language technology tools.</para>
+                  <para>b. <i>IGC1</i> is a collection of selected texts that have been assembled into consistent electronic format and enhanced with morphosyntactic annotations.</para>
+                  <para>c. <i>The Licensee‘s Results</i> are the results of work performed by the Licensee on <i>IGC1</i>.</para>
+                </item>
+              </label>
+              <label>1 Introduction<item>
+                  <para><i>The Árni Magnússon Institute for Icelandic Studies</i> is the caretaker of <i>IGC1</i>.</para>
+                  <para><i>The Árni Magnússon Institute for Icelandic Studies</i> has reached an Agreement with Text Providers that texts from their work be a part of <i>IGC1</i>. The Text Providers have, with a separate statement, authorized the Operator to give permissions to the Licensee to use the texts as described below.</para>
+                  <para>The Licensee is the user of the texts as described in this Agreement. On behalf of the Licensee there can be a group of researchers at universities or companies.</para>
+                </item>
+              </label>
+              <label>2 Terms of the Licence granted to the Licensee<item>
+                  <para>a. The operator grants a non-transferable License to the Licensee to use <i>IGC1</i> for linguistic research, for research in language technology and for the development of language technology tools. This License does not include exclusive rights to use the corpus.</para>
+                  <para>b. The access of the Licensee to <i>IGC1</i> under this License is limited to the research group of the Licensee. The research group of the Licensee consists of the Licensee‘s employees, contractors and other affiliates that the Licensee has authorized to carry out studies, according to article 2, paragraph a, with the aid of <i>IGC1</i>.</para>
+                  <para>c. <i>IGC1</i> may be installed at the place or places of work of the said research group. The place of work is defined as the computing systems that the members of a research group normally use to conduct their research activities. It can include both work and home computers, and is not restricted to particular hardware or building.</para>
+                  <para>d. Copies of <i>IGC1</i> may be made for backup purposes, or for the purposes of making data available to members of the research group, but the Licensee shall ensure that <i>IGC1</i>‘s copyright notice is reproduced on all copies of the corpus or parts thereof in accordance with article 5, paragraph d.</para>
+                  <para>e. Members of the said research group must not copy, publish, communicate to the public, or otherwise give to any third party access to the whole or any part of <i>IGC1</i>. <i>IGC1</i> may not be copied beyond what is identified in paragraphs c and d of this article. It is the responsibility of the Licensee to ensure that the members of the said research group understand and abide by these restrictions and to supervise their activities with respect to <i>IGC1</i>.</para>
+                  <para>f. Neither the Licensee nor his research group may rent out or sell <i>IGC1</i>, or otherwise charge for the use of the corpus or transfer the license.</para>
+                  <para>g. There are no restrictions on the use of the Licensee‘s results except that the Licensee may not publish in print or electronic form or exploit commercially in any form whatsoever any extracts from <i>IGC1</i> other than those allowed under article 14 of the Copyright Act No 73/1972, and in such cases should always refer to the source.</para>
+                  <para>h. Upon publication or other disclosure or dissemination to the public that is permitted under paragraph g of this article, the author‘s moral right should be respected, according to the Copyright Act No 73/1972, and no identifiable information of third parties should be published.</para>
+                  <para>i. <i>IGC1</i> should be referenced<footnote label="2">  Citation for the texts of  <i>IGC1</i>: The Icelandic Gigaword Corpus (IGC1). Project management: Eiríkur Rögnvaldsson, Sigrún Helgadóttir and Steinþór Steingrímsson. The Arni Magnússon Institute for Icelandic Studies. Downloaded [DATE] from http://www.malfong.is/index.php?lang=en&amp;pg=rmh.</footnote> as a source in publications of research where <i>IGC1</i> has been utilized. The same applies to the release of any language technology tools that have used <i>IGC1</i>.</para>
+                </item>
+              </label>
+              <label>3 Payment<item>
+                  <para>There is no charge for the use of the <i>IGC1</i> texts.</para>
+                </item>
+              </label>
+              <label>4 Period of Agreement<item>
+                  <para>The License is valid indefinitely if the Licensee abides by the terms of the License. The License can be terminated as specified in article 8 should the Licensee commit any material breach of the License.</para>
+                </item>
+              </label>
+              <label>5 Requirements to the Licensee<item>
+                  <para>Licensee and others in his research group must always exercise the utmost precautions to comply with the provisions of this Agreement and shall amongst other things:</para>
+                  <para>a. Maintain up-to-date written records of all copies of <i>IGC1</i> created, of all individuals in the research group of the Licensee that have access to the corpus at all times and of where these copies are stored. Records should be kept of all projects undertaken by the Licensee where <i>IGC1</i> is used. Licensee must produce such records promptly upon request from the Operator.</para>
+                  <para>b. Regularly check the status and use of <i>IGC1</i> such as updating regularly all files, according to paragraph a.</para>
+                  <para>c. Make use of file protection and other data security measures to prevent insofar as possible all and any unauthorized access to the files of the corpus. Access to <i>IGC1</i> shall only be allowed with the use of a password that Licensee assigns to the individuals in his research group, and this password must not be given to unauthorized persons.</para>
+                  <para>d. All necessary steps must be taken to protect copyrights, as well as intellectual property rights, owned by the Árni Magnússon Institute for Icelandic Studies, and that of the Text Providers of <i>IGC1</i>.</para>
+                  <para>e. Should the Licensee suspect his employees, members of his research group or his partners of having violated these terms or mishandled access to <i>IGC1</i>, he must immediately notify the Operator.</para>
+                  <para>The Licensee shall ensure, among other things through agreements with individuals in his research group, whether employees, contractors or other partners, that they comply with the security measures specified in paragraph c, and other measures he may prescribe, and that when the research project is completed all copies of IGC1 be deleted. An employee of the Licensee, who is so authorized, shall send the Operators a written confirmation that the Licensee has complied with this requirement.</para>
+                  <para>The Licensee shall ensure that only those working on the project of the research group at any given time have access to the corpus.</para>
+                </item>
+              </label>
+              <label>6 Limitation of Liability<item>
+                  <para>a. The Operator does not guarantee that <i>IGC1</i> is suitable for a particular use or is useful under certain circumstances, even though the plans of the Licensee have previously been presented to him.</para>
+                  <para>b. The Operator is not responsible for the technical characteristics or limitations of <i>IGC1</i>.</para>
+                  <para>c. The Operator does not warrant that the operation of any software supplied with <i>IGC1</i> will be uninterrupted or free from errors.</para>
+                  <para>d. In no circumstances will the Operator be under any liability to the Licensee for loss of profits, goodwill or any kind of consequential losses of any nature even if such loss was foreseeable.</para>
+                  <para>e. The Operator shall accept no liability whatsoever in connection with any damage to the tangible property of the Licensee resulting from the negligence of the Operator, his employees, agents or subcontractors, or of other reasons.</para>
+                </item>
+              </label>
+              <label>7 Rights reserved<item>
+                  <para>All intellectual property rights, including copyright, related to <i>IGC1</i>, are retained by the Text Providers and the <i>Árni Magnússon Institute for Icelandic Studies</i>.</para>
+                </item>
+              </label>
+              <label>8 Termination<item>
+                  <para>a. The Operator may terminate the Licence by giving written notice without a special warning, if the Licensee commits any material breach of this Agreement.</para>
+                  <para>b. The License shall automatically terminate if the estate of Licensee is declared bankrupt.</para>
+                </item>
+              </label>
+              <label>9 Disputes<item>
+                  <para>In the case of a dispute about this contract and if agreement is not reached between the parties, the District Court of Reykjavík has the jurisdiction.</para>
+                </item>
+              </label>
+            </list>
+          </para>
+        </availability>
+        <date when="2020-06-01">2020-06-01</date>
+      </publicationStmt>
+      <sourceDesc>
+        <p lang="is">Íslenska Risamálheildin (2019) er safn rúmlega 1.555 milljóna lesmálsorða af texta (greinarmerki ekki meðtalin). Hluti textanna eru opinberir textar (t.d. Alþingisræður sem ná aftur til ársins 1907, lagatexti, dómar). Einnig fengust stór textasöfn frá ýmsum fjölmiðlum og ýmsir textar úr textasafni Árnastofnunar. Risamálheildin er mörkuð málheild þannig að öllum lesmálsorðum í málheildinni fylgir greiningarstrengur, mark, þar sem fram kemur orðflokkur og beygingarleg atriði og nefnimynd og hverjum texta í málheildinni fylgja upplýsingar um uppruna textans. Málfræðigreiningin gefur færi á markvissri leit í textunum. Vinna verið verkið hófst á Stofnun Árna Magnússonar í íslenskum fræðum árið 2015 og var, fyrstu þrjú árin, að mestu fyrir styrkt af Innviðasjóði (styrknúmer 151110-0031, verkefnisstjóri Eiríkur Rögnvaldsson), Mótframlagasjóði Háskóla Íslands og mennta- og menningarmálaráðuneytinu. Ný útgáfa er gefin út árlega. Textana má sækja á vefsetrið <ptr target="https://málföng.is"/> til þess að nota þá í rannsóknum og í máltæknitólum.</p>
+        <p lang="is">Til þess að unnt yrði að nota málheildina í máltækniverkefnum var lögð áhersla á að afla leyfa frá rétthöfum fyrir notkun textanna. Upphaflega var miðað við að afla leyfa frá rétthöfum til þess að veita aðgang að textunum með leyfi sem samtökin Creative Commons <ptr target="https://creativecommons.org/"/> hafa skilgreint. Ekki gátu allir rétthafar samþykkt þá skilmála. Textum málheildarinnar er því skipt í tvo hluta, <i>RMH1</i> og <i>RMH2</i>. Í <i>RMH1</i> eru textar sem veittur er aðgangur að með sérstöku leyfi sem byggist á leyfi sem var útbúið fyrir texta <i>Markaðrar íslenskrar málheildar</i> (<i>MÍM</i>) (sjá <ptr target="#LEYFI"/>).  Í <i>RMH2</i> eru opinberir textar og textar sem leyfður er aðgangur að með CC BY leyfi <ptr target="https://creativecommons.org/licenses/by/4.0/legalcode"/>. Allir rétthafar hafa samþykkt að veita afnotarétt af textum sínum án þess að greiðsla kæmi fyrir.</p>
+        <p lang="is">Sjá &lt;sourceDesc/biblStruct/monogr"&gt; í haus hverrar .xml skrár fyrir sig.</p>
+        <p lang="en">The Icelandic Gigaword corpus consists of more than  1,555 million running words of text (punctuation marks not included). Part of the corpus texts are official texts (parliamentary speeches as far back as 1907, law text, adjudications) but it also contains big text collections from news media. The Gigaword corpus is a tagged corpus which means that each running word is accompanied by a morphosyntactic tag and lemma and each text is accompanied by bibliographic information. The morphosyntatctic tags and lemma make it easier to search for special constructions in the corpus. The compilation of the corpus started the year 2015 at the Árni Magnússon Institute for Icelandic Studies and was, for the first three years, mostly funded by the Infrastructure Fund (no. 151110-0031, project manager Eiríkur Rögnvaldsson), the Contribution grants fund (Mótframlagssjóður) at the University of Iceland and the Ministry of Education and Culture. New cersion of the corpus will be published every year. The texts can be downloaded from the website <ptr target="https://málföng.is"/> for use in research and language technology tools.</p>
+        <p lang="en">To enable the use of the corpus in Language Technology projects it was considered important to secure copyright clearance for the texts to be used. Originally the idea was to secure permission from copyright owners to give access to the texts with Creative Commons licenses <ptr target="https://creativecommons.org/"/>. All copyright holders could not agree to those terms. The corpus is therefore divided into two parts, <i>IGC1</i> and <i>IGC2</i>. <i>IGC1</i> contains texts that can be used with a special license developed for the <i>Tagged Icelandic Corpus</i> (<i>MIM</i>) (see <ptr target="#LICENSE"/>).  <i>IGC1</i> contains official texts and texts that can be used with CC BY license <ptr target="https://creativecommons.org/licenses/by/4.0/legalcode"/>. All copyright holders have agreed that their material may be used free of licensing charges. </p>
+        <p lang="en">See sourceDesc/biblStruct/monogr in the header of each of the .xml files.</p>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="is">Icelandic</language>
+        <language ident="en">English</language>
+      </langUsage>
+    </profileDesc>
+
+    <encodingDesc>
+		
+      <projectDesc>
+        <p lang="is">Textum <i>RMH</i> var skipt í setningar og lesmálsorð og þeir síðan markaðir og lemmaðir. Tókarinn <i>Tokenizer</i>, þróaður af Miðeined ehf. <footnote label="3">Þorsteinsson, Vilhjálmur, 2020, Tokenizer for Icelandic text, CLARIN-IS, Stofnun Árna Magnússonar, http://hdl.handle.net/20.500.12537/11</footnote>, var notaður við að skipta textum í setningar og lesmálsorð. Mörkun var gerð með <i>ABL-tagger</i> <footnote label="3">Steinþór Steingrímsson, Örvar Kárason og Hrafn Loftsson. 2019. Augmenting a BiLSTM tagger with a morphological lexicon and a lexical category identification step. Í Proceedings of RANLP 2019, Varna, Bulgaria.</footnote>. Lemmun var gerð með lemmunarforritinu <i>Nefni</i> <footnote label="4">Svanhvít Lilja Ingólfsdóttir, Hrafn Loftsson, Jón Friðrik Daðason, Kristín Bjarnadóttir. 2019. Nefnir: A high accuracy lemmatizer for Icelandic. <i>Proceedings of the 22nd Nordic Conference on Computational Linguistics</i>, s. 310-315. Turku, Finland.</footnote>. Mörkun og lemmun er ekki handleiðrétt.</p>
+
+        <p lang="is">Markamengið sem er notað er byggt á því sem var þróað fyrir gerð <i>Íslenskrar orðtíðnibókar</i> <ptr target="http://malfong.is/?pg=ordtidnibok"/> en nokkrar breytingar hafa verið gerðar á því síðan þá, og þær stærstu árið 2019 (sjá umfjöllun á https://repository.clarin.is/repository/xmlui/handle/20.500.12537/26). Samskeytt mörkuð málheild <i>Íslenskrar orðtíðnibókar</i> og <i>MÍM gulls</i> <ptr target="https://repository.clarin.is/repository/xmlui/handle/20.500.12537/26"/> var notuð til þess að þjálfa <i>ABL-tagger</i>. Orðasöfn sem notuð eru við mörkunina voru aukin með orðasafni Beygingarlýsingar íslensks nútímamáls (<i>BÍN</i>, <ptr target="http://bin.arnastofnun.is/forsida/"/>).</p>
+
+        <p lang="is"> Allir rétthafar að texta í <i>RMH</i> sem eru varðir af höfundarrétti gáfu samþykki sitt fyrir því að textar þeirra væru notaðir. Málheildin er aðgengileg á tvenns konar hátt. Í fyrsta lagi er veittur leitaraðgangur <ptr target="http://malheildir.arnastofnun.is/"/>. Útkoma úr leitinni er orðstöðulykill þar sem sjá má allt að 20 orð í einu úr hverjum texta og er þessi aðgangur innan ramma höfundalaga (nr. 73/1972). Í öðru lagi geta notendur fengið afrit af mörkuðum textum <i>RMH</i> til þess að nota í málfræðilegum rannsóknum og fyrir máltækniverkefni <ptr target="http://www.malfong.is/index.php?pg=rmh"/>. </p>
+
+        <p lang="en">The texts in <i>IGC</i> were divided into sentences and running words and then tagged and lemmatized. <i>Tokenizer</i>, developed by Miðeind ehf. <footnote label="3">Þorsteinsson, Vilhjálmur, 2020, Tokenizer for Icelandic text, CLARIN-IS, Stofnun Árna Magnússonar, http://hdl.handle.net/20.500.12537/11</footnote> was used to divide the text into sentences and running words. Tagging was performed with <i>ABL-tagger</i> <footnote label="3">Steinþór Steingrímsson, Örvar Kárason og Hrafn Loftsson. 2019. Augmenting a BiLSTM tagger with a morphological lexicon and a lexical category identification step. Í Proceedings of RANLP 2019, Varna, Bulgaria.</footnote>. Lemmatization was performed with the lemmatizer <i>Nefnir</i> <footnote label="4">Svanhvít Lilja Ingólfsdóttir, Hrafn Loftsson, Jón Friðrik Daðason, Kristín Bjarnadóttir. 2019. Nefnir: A high accuracy lemmatizer for Icelandic. <i>Proceedings of the 22nd Nordic Conference on Computational Linguistics</i>, s. 310-315. Turku, Finland.</footnote>. Tags and lemmas are not manually corrected. </p>
+
+	        <p lang="en">The tagset used for tagging <i>IGC</i> is based on the one developed for the making of the <i>Icelandic Frequency Dictionary</i> (<i>IFD</i>) <ptr target="http://www.malfong.is/index.php?lang=en&amp;pg=ordtidnibok"/> but some changes have been made since then, the most important n 2019 (see https://repository.clarin.is/repository/xmlui/handle/20.500.12537/26). A corpus made by concatinating the <i>IFD</i> corpus and the <i>MIM-GOLD</i> corpus <ptr target="https://repository.clarin.is/repository/xmlui/handle/20.500.12537/26"/> was used to train <i>ABL-tagger</i>. Dictionaries used when tagging were augmented with the dictionary of <i>The Database of Modern Icelandic Inflection</i> (<i>BÍN</i>, <ptr target="http://bin.arnastofnun.is/forsida/"/>.</p>
+
+        <p lang="en">All owners of copyrighted text in <i>IGC</i> gave their permission for the use of their text.  The corpus is available in two ways. Firstly the corpus is  searchable <ptr target="http://malheildir.arnastofnun.is/"/>. The result of the search is a KWIC index where it is possible to see up to 20 words from each text. This is within the limits of copyright law (nr. 73/1972). Secondly the corpus is available for download for use in linguistic research and language technology projects <ptr target="http://www.malfong.is/index.php?lang=en&amp;pg=rmh/"/>. </p>
+
+      </projectDesc>
+      
+     <samplingDecl>
+        <p lang="is">Stærsti flokkur texta í <i>RMH</i> er textar af vefmiðlum, ríflega 42%. Úr prentuðum blöðum fengust tæplega 27% texta, úr ljósvakamiðlum ríflega 4% og opinberir textar eru rúmlega í 24% af málheildinni. Annað efni (minna en 2%) er af Vísindavef Háskóla Íslands, úr íslenskum hluta Wikipediu og úr textasafni Árnastofnunar. Uppgefin hlutföll miðast við fjölda lesmálsorða í textunum. Textar sem veittur er aðgangur að með sérstöku leyfi sem byggist á leyfi <i>Markaðar íslenskrar málheildar</i> (<i>RMH1</i>) eru rúm 54% af málheildinni og afgangurinn er textar sem veittur er aðgangur að með CC BY leyfi (<i>RMH2</i>). Rúmlega 85% textanna er frá því eftir árið 2000 og tæplega 95% textanna frá því eftir 1980. Elstu textarnir eru alþingisræður frá 1907 og örfáir lagatextar frá því fyrir 1900, sá elsti frá 1275.</p>
+	
+	    <p lang="is">Í <i>RMH</i> eru 5.047.999 skrár með 1.555.086.877 orðum.</p>
+
+        <p lang="en">The largest protion of text in <i>IGC</i> comes from web media, just over 42%. From printed papers there are 27% of texts in the corpus, from radio and television just over 4% and official texts are almost 24% of the corpus. Other texts (less than 2%) come from the University of Iceland Science Web, the Icelandic part of Wikipedia and from the text collection of The Árni Magnússon Institute for Icelandic studies. The ratio provided for each text category is based on the number of running words in the texts. Texts made available with a special license based on the license of the <i>Tagged Icelandic Corpus</i> (<i>IGC1</i>) are just over 54% of the corpus and the remainder are texts made available with the CC BY license (<i>IGC2</i>). Over 85% of the texts are from the period after the year 2000 and almost 95% of the texts from the period after 1980. The oldest texts are parliamentary speeches from 1907 and a few legal texts from before 1900, the oldest from 1275.</p>
+	
+	    <p lang="en"><i>IGC</i> contains 5,047,999 files containing 1,555,086,877 words.</p>      
+
+      </samplingDecl>
+      
+      <p>
+        <list lang="isl" type="Grammatical Analysis">
+          <list type="Nafnorð">
+            <item column="1" type="Orðflokkur">
+              <item type="n">nafnorð</item>
+            </item>
+            <item column="2" type="Kyn">
+              <item type="k">karlkyn</item>
+              <item type="v">kvenkyn</item>
+              <item type="h">hvorugkyn</item>              
+            </item>
+            <item column="3" type="Tala">
+              <item type="e">eintala</item>
+              <item type="f">fleirtala</item>
+            </item>
+            <item column="4" type="Fall">
+              <item type="n">nefnifall</item>
+              <item type="o">þolfall</item>
+              <item type="þ">þágufall</item>
+              <item type="e">eignarfall</item>
+              <item type="f">ógreint</item>
+            </item>
+            <item column="5" type="Greinir">
+              <item type="g">með viðskeyttum greini</item>
+              <item type="f">ógreint</item>
+            </item>
+            <item column="6" type="Sérnöfn">
+              <item type="s">sérnafn</item>
+            </item>
+          </list>
+          <list type="Lýsingarorð">
+            <item column="1" type="Orðflokkur">
+              <item type="l">lýsingarorð</item>
+            </item>
+            <item column="2" type="Kyn">
+              <item type="k">karlkyn</item>
+              <item type="v">kvenkyn</item>
+              <item type="h">hvorugkyn</item>
+            </item>
+            <item column="3" type="Tala">
+              <item type="e">eintala</item>
+              <item type="f">fleirtala</item>
+            </item>
+            <item column="4" type="Fall">
+              <item type="n">nefnifall</item>
+              <item type="o">þolfall</item>
+              <item type="þ">þágufall</item>
+              <item type="e">eignarfall</item>
+            </item>
+            <item column="5" type="Beyging">
+              <item type="s">sterk beyging</item>
+              <item type="v">veik beyging</item>
+              <item type="o">óbeygt</item>
+            </item>
+            <item column="6" type="Stig">
+              <item type="f">frumstig</item>
+              <item type="m">miðstig</item>
+              <item type="e">efstastig</item>
+            </item>
+          </list>
+          <list type="Fornöfn">
+            <item column="1" type="Orðflokkur">
+              <item type="f">fornafn</item>
+            </item>
+            <item column="2" type="Flokkur">
+              <item type="a">ábendingarfornafn</item>
+              <item type="b">óákveðið ábendingarfornafn</item>
+              <item type="e">eignarfornafn</item>
+              <item type="o">óákveðið fornafn</item>
+              <item type="p">persónufornafn</item>
+              <item type="s">spurnarfornafn</item>
+              <item type="t">tilvísunarfornafn</item>
+            </item>
+            <item column="3" type="Kyn/Persóna">
+              <item type="k">karlkyn</item>
+              <item type="v">kvenkyn</item>
+              <item type="h">hvorugkyn</item>
+              <item type="1">1. persóna</item>
+              <item type="2">2. persóna</item>
+            </item>
+            <item column="4" type="Tala">
+              <item type="e">eintala</item>
+              <item type="f">fleirtala</item>
+            </item>
+            <item column="5" type="Fall">
+              <item type="n">nefnifall</item>
+              <item type="o">þolfall</item>
+              <item type="þ">þágufall</item>
+              <item type="e">eignarfall</item>
+            </item>
+          </list>
+          <list type="Greinir">
+            <item column="1" type="Orðflokkur">
+              <item type="g">greinir</item>
+            </item>
+            <item column="2" type="Kyn">
+              <item type="k">karlkyn</item>
+              <item type="v">kvenkyn</item>
+              <item type="h">hvorugkyn</item>
+            </item>
+            <item column="3" type="Tala">
+              <item type="e">eintala</item>
+              <item type="f">fleirtala</item>
+            </item>
+            <item column="4" type="Fall">
+              <item type="n">nefnifall</item>
+              <item type="o">þolfall</item>
+              <item type="þ">þágufall</item>
+              <item type="e">eignarfall</item>
+            </item>
+          </list>
+          <list type="Töluorð">
+            <item column="1" type="Orðflokkur">
+              <item type="t">töluorð</item>
+            </item>
+            <item column="2" type="Flokkur">
+              <item type="f">frumtala</item>
+              <item type="a">ártöl og fleiri óbeygjanlegar tölur</item>
+              <item type="p">prósentutölur</item>
+              <item type="o">fjöldatölur framan við hundrað og þúsund</item>
+            </item>
+            <item column="3" type="Kyn">
+              <item type="k">karlkyn</item>
+              <item type="v">kvenkyn</item>
+              <item type="h">hvorugkyn</item>
+            </item>
+            <item column="4" type="Tala">
+              <item type="e">eintala</item>
+              <item type="f">fleirtala</item>
+            </item>
+            <item column="5" type="Fall">
+              <item type="n">nefnifall</item>
+              <item type="o">þolfall</item>
+              <item type="þ">þágufall</item>
+              <item type="e">eignarfall</item>
+            </item>
+          </list>
+          <list type="Sagnir (þó ekki lýsingarháttur þátíðar)">
+            <item column="1" type="Orðflokkur">
+              <item type="s">sögn (þó ekki lýsingarháttur þátíðar)</item>
+            </item>
+            <item column="2" type="Háttur">
+              <item type="n">nafnháttur</item>
+              <item type="b">boðháttur</item>
+              <item type="f">framsöguháttur</item>
+              <item type="v">viðtengingarháttur</item>
+              <item type="l">lýsingarháttur nútíðar</item>
+            </item>
+            <item column="3" type="Mynd">
+              <item type="g">germynd</item>
+              <item type="m">miðmynd</item>
+            </item>
+            <item column="4" type="Persóna">
+              <item type="1">1. persóna</item>
+              <item type="2">2. persóna</item>
+              <item type="3">3. persóna</item>
+            </item>
+            <item column="5" type="Tala">
+              <item type="e">eintala</item>
+              <item type="f">fleirtala</item>
+            </item>
+            <item column="6" type="Tíð">
+              <item type="n">nútíð</item>
+              <item type="þ">þátíð</item>
+            </item>
+          </list>
+          <list type="Sagnir (lýsingarháttur þátíðar)">
+            <item column="1" type="Orðflokkur">
+              <item type="s">sögn (lýsingarháttur þátíðar)</item>
+            </item>
+            <item column="2" type="Háttur">
+              <item type="þ">lýsingarháttur þátíðar</item>
+            </item>
+            <item column="3" type="Mynd">
+              <item type="g">germynd</item>
+              <item type="m">miðmynd</item>
+            </item>
+            <item column="4" type="Kyn">
+              <item type="k">karlkyn</item>
+              <item type="v">kvenkyn</item>
+              <item type="h">hvorugkyn</item>
+            </item>
+            <item column="5" type="Tala">
+              <item type="e">eintala</item>
+              <item type="f">fleirtala</item>
+            </item>
+            <item column="6" type="Fall">
+              <item type="n">nefnifall</item>
+              <item type="o">þolfall</item>
+            </item>
+          </list>
+          <list type="Atviksorð">
+            <item column="1" type="Orðflokkur">
+              <item type="a">atviksorð</item>
+            </item>
+            <item column="2" type="Flokkur/Fallstjórn">
+              <item type="a">stýrir ekki falli</item>
+              <item type="f">stýrir falli</item>    
+              <item type="u">upphrópun</item>                        
+            </item>
+            <item column="3" type="Stig">
+              <item type="m">miðstig</item>
+              <item type="e">efsta stig</item>
+            </item>
+          </list>
+          <list type="Samtengingar">
+            <item column="1" type="Orðflokkur">
+              <item type="c">samtenging</item>
+            </item>
+            <item column="2" type="Flokkur">
+              <item type="n">nafnháttarmerki</item>
+              <item type="t">tilvísunartenging</item>
+            </item>
+          </list>
+          <list type="Skammstöfun">
+            <item column="1" type="Orðflokkur">
+              <item type="k">skammstöfun</item>
+            </item>
+            <item column="2" type="Flokkur">
+              <item type="s">skammstöfun</item>
+              <item type="t">stytting</item>
+            </item>          
+          </list>
+          <list type="Veffang eða tölvupóstfang">
+            <item column="1" type="Flokkur">
+              <item type="v">veffang eða tölvupóstfang</item>
+            </item>
+          </list>
+          <list type="Erlend orð">
+            <item column="1" type="Flokkur">
+              <item type="e">erlent orð</item>
+            </item>
+          </list>
+          <list type="Ógreint orð">
+            <item column="1" type="Flokkur">
+              <item type="x">ógreint orð</item>
+            </item>
+          </list>
+          <list type="Greinarmerki">
+            <item column="1" type="Orðflokkur">
+              <item type="p">greinarmerki</item>
+            </item>
+            <item column="2" type="Flokkur">
+              <item type="l">lok setningar</item>
+              <item type="k">komma</item>
+              <item type="g">gæsalappir</item>
+              <item type="a">annað</item>
+            </item>
+          </list>
+          <list type="Tákn">
+            <item column="1" type="Orðflokkur">
+              <item type="m">Tákn</item>
+            </item>            
+          </list>
+        </list>
+        
+        <list lang="eng" type="Grammatical Analysis">
+          <list type="Nouns">
+            <item column="1" type="Word class">
+              <item type="n">noun</item>
+            </item>
+            <item column="2" type="Gender">
+              <item type="k">masculine</item>
+              <item type="v">feminine</item>
+              <item type="h">neuter</item>              
+            </item>
+            <item column="3" type="Number">
+              <item type="e">singular</item>
+              <item type="f">plural</item>
+            </item>
+            <item column="4" type="Case">
+              <item type="n">nominative</item>
+              <item type="o">accusative</item>
+              <item type="þ">dative</item>
+              <item type="e">genitive</item>
+            </item>
+            <item column="5" type="Article">
+              <item type="g">with suffixed definite article</item>
+            </item>
+            <item column="6" type="Proper nouns">
+              <item type="s">proper noun</item>
+            </item>
+          </list>
+          <list type="Adjectives">
+            <item column="1" type="Word class">
+              <item type="l">adjective</item>
+            </item>
+            <item column="2" type="Degree">
+              <item type="f">positive</item>
+              <item type="m">comparative</item>
+              <item type="e">superlative</item>
+            </item>
+            <item column="3" type="Declension">
+              <item type="s">strong</item>
+              <item type="v">weak</item>
+              <item type="o">indeclinable</item>
+            </item>
+            <item column="4" type="Gender">
+              <item type="k">masculine</item>
+              <item type="v">feminine</item>
+              <item type="h">neuter</item>
+            </item>
+            <item column="5" type="Number">
+              <item type="e">singular</item>
+              <item type="f">plural</item>
+            </item>
+            <item column="6" type="Case">
+              <item type="n">nominative</item>
+              <item type="o">accusative</item>
+              <item type="þ">dative</item>
+              <item type="e">genitive</item>
+            </item>
+          </list>
+          <list type="Pronouns">
+            <item column="1" type="Word class">
+              <item type="f">pronoun</item>
+            </item>
+            <item column="2" type="Subcategory">
+              <item type="a">demonstrative pronoun</item>
+              <item type="b">indefinite demonstrative pronoun</item>
+              <item type="e">possessive pronoun</item>
+              <item type="o">indefinite pronoun</item>
+              <item type="p">personal pronoun</item>
+              <item type="s">interrogative pronoun</item>
+              <item type="t">relative pronoun</item>
+            </item>
+            <item column="3" type="Gender/Person">
+              <item type="k">masculine</item>
+              <item type="v">feminine</item>
+              <item type="h">neuter</item>
+              <item type="1">1st person</item>
+              <item type="2">2nd person</item>
+            </item>
+            <item column="4" type="Number">
+              <item type="e">singular</item>
+              <item type="f">plural</item>
+            </item>
+            <item column="5" type="Case">
+              <item type="n">nominative</item>
+              <item type="o">accusative</item>
+              <item type="þ">dative</item>
+              <item type="e">genitive</item>
+            </item>
+          </list>
+          <list type="Independent article">
+            <item column="1" type="Word class">
+              <item type="g">article</item>
+            </item>
+            <item column="2" type="Gender">
+              <item type="k">masculine</item>
+              <item type="v">feminine</item>
+              <item type="h">neuter</item>
+            </item>
+            <item column="3" type="Number">
+              <item type="e">singular</item>
+              <item type="f">plural</item>
+            </item>
+            <item column="4" type="Case">
+              <item type="n">nominative</item>
+              <item type="o">accusative</item>
+              <item type="þ">dative</item>
+              <item type="e">genitive</item>
+            </item>
+          </list>
+          <list type="Numerals">
+            <item column="1" type="Word class">
+              <item type="t">numeral</item>
+            </item>
+            <item column="2" type="Category">
+              <item type="f">cardinal</item>
+              <item type="a">dates and other indeclinable numbers</item>
+              <item type="p">percentages</item>
+              <item type="o">numbers before hundreds and thousands</item>
+            </item>
+            <item column="3" type="Gender">
+              <item type="k">masculine</item>
+              <item type="v">feminine</item>
+              <item type="h">neuter</item>
+              <item type="1">1st person</item>
+              <item type="2">2nd person</item>
+            </item>
+            <item column="4" type="Number">
+              <item type="e">singular</item>
+              <item type="f">plural</item>
+            </item>
+            <item column="5" type="Case">
+              <item type="n">nominative</item>
+              <item type="o">accusative</item>
+              <item type="þ">dative</item>
+              <item type="e">genitive</item>
+            </item>
+          </list>
+          <list type="Verbs (except for past participles)">
+            <item column="1" type="Word class">
+              <item type="s">verb (except for past participles</item>
+            </item>
+            <item column="2" type="Mood">
+              <item type="n">infinitive</item>
+              <item type="b">imperative</item>
+              <item type="f">indicative</item>
+              <item type="v">subjunctive</item>
+              <item type="l">present participle</item>
+            </item>
+            <item column="3" type="Voice">
+              <item type="g">active</item>
+              <item type="m">middle</item>
+            </item>
+            <item column="4" type="Person">
+              <item type="1">1st person</item>
+              <item type="2">2nd person</item>
+              <item type="3">3rd person</item>
+            </item>
+            <item column="5" type="Number">
+              <item type="e">singular</item>
+              <item type="f">plural</item>
+            </item>
+            <item column="6" type="Tense">
+              <item type="n">present</item>
+              <item type="þ">past</item>
+            </item>
+          </list>
+          <list type="Verbs (past participle)">
+            <item column="1" type="Word class">
+              <item type="s">verb (past participle</item>
+            </item>
+            <item column="2" type="Mood">
+              <item type="þ">past participle</item>
+            </item>
+            <item column="3" type="Voice">
+              <item type="g">active</item>
+              <item type="m">middle</item>
+            </item>
+            <item column="4" type="Person">
+              <item type="k">masculine</item>
+              <item type="v">feminine</item>
+              <item type="h">neuter</item>
+            </item>
+            <item column="5" type="Number">
+              <item type="e">singular</item>
+              <item type="f">plural</item>
+            </item>
+            <item column="6" type="Tense">
+              <item type="n">nominative</item>
+              <item type="o">accusative</item>
+            </item>
+          </list>
+          <list type="Adverbs">
+            <item column="1" type="Word class">
+              <item type="a">adverb</item>
+            </item>            
+            <item column="3" type="Class/case governor">
+              <item type="a">does not govern case</item>
+              <item type="o">governs case</item>
+              <item type="u">exclamation</item>                            
+            </item>
+            <item column="3" type="Degree">
+              <item type="m">comparative</item>
+              <item type="e">superlative</item>
+            </item>
+          </list>
+          <list type="Conjunctions">
+            <item column="1" type="Word class">
+              <item type="c">conjunction</item>
+            </item>
+            <item column="2" type="Category">
+              <item type="n">sign of infinitive</item>
+              <item type="t">relative conjunction</item>
+            </item>
+          </list>
+          <list type="Abbreviation">
+            <item column="1" type="Word class">
+              <item type="k">abbreviations</item>
+            </item>
+            <item column="2" type="Category">
+              <item type="s">abbreviation</item>
+              <item type="t">short form</item>
+            </item>          
+          </list>
+          <list type="Web address or email">
+            <item column="1" type="Word class">
+              <item type="v">web address or email</item>
+            </item>
+          </list>
+          <list type="Foreign words">
+            <item column="1" type="Category">
+              <item type="e">foreign word</item>
+            </item>
+          </list>
+          <list type="Unanalysed words">
+            <item column="1" type="Category">
+              <item type="x">unanalysed word</item>
+            </item>
+          </list>
+          <list type="Punctuation mark">
+            <item column="1" type="Word class">
+              <item type="p">greinarmerki</item>
+            </item>
+            <item column="2" type="Category">
+              <item type="l">end of setnence</item>
+              <item type="k">comma</item>
+              <item type="g">quotes</item>
+              <item type="a">others</item>
+            </item>
+          </list>
+          <list type="Tákn">
+            <item column="1" type="Orðflokkur">
+              <item type="m">Tákn</item>
+            </item>            
+          </list>          
+        </list>
+      </p>
+    </encodingDesc>
+  </teiHeader>
+</mimDoc>
