@@ -11,6 +11,8 @@ from sys import stderr
 
 SEP="0"
 
+log_file = open("log.txt","w")
+
 def get_entry(w):
     return "%s%s%s%s%s" % (w["#text"],SEP,w["@lemma"],SEP,w["@type"])
 
@@ -20,7 +22,7 @@ def get_words(s):
         try:
             sent.append(get_entry(w))
         except:
-            print("Skip entry %s" % w,file=stderr)
+            print("Skip entry %s" % w,file=log_file)
     return sent
 
 def etree_to_dict(t):
@@ -96,7 +98,7 @@ def build_elasticsearch(data_path):
                 },
             }
 
-        print("Initializing Elasticsearch...")
+        print("Initializing Elasticsearch...",file=log_file)
         es = Elasticsearch()
 
         if not es.indices.exists("bin"):
@@ -121,12 +123,12 @@ def build_elasticsearch(data_path):
                     with zip_file.open(name, 'r') as f:
                         doc = ElementTree.fromstring(f.read())
                         doc = etree_to_dict(doc)
-                        print("SENTENCES:",len(doc))
+                        print("SENTENCES:",len(doc),file=log_file)
                         for i, s in enumerate(doc):
                             id = "%s@%u" % (doc_id,i)
                             if not es.exists(index="bin",id=id):
                                 es.create(index="bin",id=id, body=s)
-                                print("Created %s" % id)
+                                print("Created %s" % id,file=log_file)
                                 done_list.append(id)
 
         # If done, update the status of the done json file
@@ -134,7 +136,7 @@ def build_elasticsearch(data_path):
             done = json.dumps({'document_ids': done_list}, indent=4)
             f.write(done)
 
-        print("Done!")
+        print("Done!",file=log_file)
 
 if __name__ == "__main__":
     
