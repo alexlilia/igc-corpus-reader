@@ -138,7 +138,7 @@ def build_elasticsearch(data_path):
 
 if __name__ == "__main__":
     
-    DATA_PATH = 'data'
+    DATA_PATH = '../data'
     
     build_elasticsearch(data_path=DATA_PATH)
 
