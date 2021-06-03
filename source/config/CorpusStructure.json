@@ -1,0 +1,40 @@
+{
+    "buckets": [
+        {
+            "id": "e73df3ad-7734-4ac2-ac19-622d06867a58",
+            "name": "Transcode task bucket",
+            "schemas": [
+                {
+                    "schemaType": "DOCUMENT_META",
+                    "jsonSchema": null
+                }
+            ]
+        },
+        {
+            "id": "182b2322-9d7f-4953-834b-68219721486b",
+            "name": "Annotations",
+            "schemas": [
+                {
+                    "schemaType": "TOKEN",
+                    "jsonSchema": null
+                },
+                {
+                    "schemaType": "term_demo",
+                    "jsonSchema": null
+                },
+                {
+                    "schemaType": "SENTENCE",
+                    "jsonSchema": null
+                },
+                {
+                    "schemaType": "Timex3",
+                    "jsonSchema": null
+                },
+                {
+                    "schemaType": "TDI_SINGLE",
+                    "jsonSchema": null
+                }
+            ]
+        }
+    ]
+}
