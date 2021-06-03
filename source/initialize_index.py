@@ -43,7 +43,7 @@ def etree_to_dicts(t):
                     except:
                         sent.append("%s%s%s%s%s" % (w.text,SEP,w.text,SEP,w.text))
 #                sents.append({"_op_type":"create","_id":index, "_index":"bin", "doc_type":"text", "doc":{"text": " ".join(sent)}})
-                sents.append({"_op_type":"create","_id":index, "_index":"bin", "text": " ".join(sent)})
+                sents.append({"_op_type":"create","_id":"%s.%u" % (args.zip_file.replace("/","_"),index), "_index":"bin", "text": " ".join(sent)})
                 index += 1
     return sents
 
@@ -163,10 +163,12 @@ def build_elasticsearch(zip_fn,corpus_json):
 #                            print("Created %s" % id,file=log_file)
 #                        done_list.append(id)
                     if len(sents) > 10000:
+                        print(sents[0])
                         response = helpers.bulk(es, sents, index='bin')
                         sents = []
                     DOCS = []
     if len(sents) != 0:
+        print(sents[0])
         response = helpers.bulk(es, sents, index='bin')
         sents = []
 #                    es.bulk(gendata(),index="bin")
