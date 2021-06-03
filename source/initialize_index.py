@@ -163,12 +163,10 @@ def build_elasticsearch(zip_fn,corpus_json):
 #                            print("Created %s" % id,file=log_file)
 #                        done_list.append(id)
                     if len(sents) > 10000:
-                        print(sents[0])
                         response = helpers.bulk(es, sents, index='bin')
                         sents = []
                     DOCS = []
     if len(sents) != 0:
-        print(sents[0])
         response = helpers.bulk(es, sents, index='bin')
         sents = []
 #                    es.bulk(gendata(),index="bin")
