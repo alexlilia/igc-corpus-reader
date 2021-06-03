@@ -3,18 +3,22 @@ from pathlib import Path
 import glob
 import xml, json
 from zipfile import ZipFile
-from elasticsearch import Elasticsearch
+from elasticsearch import Elasticsearch, helpers
 from tqdm import tqdm
 from xml.etree import ElementTree
 import xmltodict
 from sys import stderr
 import argparse
+import uuid
 
 SEP="0"
 
 log_file = open("log.txt","w")
 
+index = 0
+
 def etree_to_dicts(t):
+    global index
     # Get list of div elements in the document
     divs = t[1][0]
 
@@ -38,8 +42,30 @@ def etree_to_dicts(t):
                                                     w.attrib["type"]))
                     except:
                         sent.append("%s%s%s%s%s" % (w.text,SEP,w.text,SEP,w.text))
-                sents.append({"text": " ".join(sent)})
+#                sents.append({"_op_type":"create","_id":index, "_index":"bin", "doc_type":"text", "doc":{"text": " ".join(sent)}})
+                sents.append({"_op_type":"create","_id":index, "_index":"bin", "text": " ".join(sent)})
+                index += 1
     return sents
+
+#actions = [
+#    {
+#        "_id" : uuid.uuid4(), # random UUID for _id
+#        "doc_type" : "person", # document _type
+#        "doc": { # the body of the document
+#            "name": "George Peterson",
+#            "sex": "male",
+#            "age": 34+doc,
+#            "years": 10+doc
+#        }
+#    }
+#    for doc in range(100)
+#]
+
+
+DOCS=[]
+def gendata():
+    for doc in DOCS:
+        yield doc
 
 def build_elasticsearch(zip_fn,corpus_json):
 
@@ -87,11 +113,18 @@ def build_elasticsearch(zip_fn,corpus_json):
             'index': {
                 'number_of_shards': '1',
                 'max_result_window': '1000000',
+#                'refresh_interval': -1
                 }
             },
         'mappings': {
             'properties': {
-                'text': {'type': 'text'},
+                'text': {'type': 'text', 
+#                         'index':'not_analyzed',
+#                         "_source": { "enabled": False},
+                         "_all": { "enabled": True},
+#                         "norms": { "enabled": False},
+#                        "index_options": "docs"
+                         },
                 },
             },
         }
@@ -108,6 +141,7 @@ def build_elasticsearch(zip_fn,corpus_json):
                           )
 
     # iterate all documents and create an index for each document
+    sents = []
     with ZipFile(zip_fn, 'r') as zip_file:
         results = []
         for i, doc_path in zip(tqdm(range(len(documents_ids))), zip_file.namelist()):
@@ -119,14 +153,23 @@ def build_elasticsearch(zip_fn,corpus_json):
                 with zip_file.open(name, 'r') as f:
                     doc = ElementTree.fromstring(f.read())
                     doc = etree_to_dicts(doc)
-                    print("SENTENCES:",len(doc),file=log_file)
                     for i, s in enumerate(doc):
-                        id = "%s@%u" % (doc_id,i)
-                        if not es.exists(index="bin",id=id):
-                            es.create(index="bin",id=id, body=s)
-                            print("Created %s" % id,file=log_file)
-                            done_list.append(id)
-
+#                        id = "%s@%u" % (doc_id,i)
+                        sents.append(s)
+#                        ids.append(id)
+#                        if not es.exists(index="bin",id=id):
+                            
+#                            es.create(index="bin",id=id, body=s)
+#                            print("Created %s" % id,file=log_file)
+#                        done_list.append(id)
+                    if len(sents) > 10000:
+                        response = helpers.bulk(es, sents, index='bin')
+                        sents = []
+                    DOCS = []
+    if len(sents) != 0:
+        response = helpers.bulk(es, sents, index='bin')
+        sents = []
+#                    es.bulk(gendata(),index="bin")
     # If done, update the status of the done json file
     with open(done_path, 'w') as f:
         done = json.dumps({'document_ids': done_list}, indent=4)
@@ -148,3 +191,4 @@ args = parser.parse_args()
 if __name__ == "__main__":
     build_elasticsearch(zip_fn=args.zip_file,
                         corpus_json=args.corpus_json)
+    print("done")
