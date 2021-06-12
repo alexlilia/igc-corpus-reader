@@ -36,7 +36,7 @@ if __name__=="__main__":
     print("Got %d hits" % res['hits']['total']['value'])
     print("Displaying maximally %u results:" % MAX_RES)
     for i, hit in enumerate(res['hits']['hits']):
-        j = regex.search('\w*%s\w*' % query, hit["_source"]["text"], flags=regex.UNICODE)
+        j = regex.search('[\w\S]*%s[\w\S]*' % query, hit["_source"]["text"], flags=regex.UNICODE)
         print("%u:\t%s:\t%s" % (i+1,j,hit["_source"]["text"]))
 
     my_dict = dict()
@@ -46,7 +46,7 @@ if __name__=="__main__":
         header_present  = False 
         for entry in all_results:
             # print(entry)
-            j = regex.search('\w*%s\w*' % query, entry["_source"]["text"], flags=regex.UNICODE).group(0).split("0")
+            j = regex.search('[\w\S]*%s[\w\S]*' % query, entry["_source"]["text"], flags=regex.UNICODE).group(0).split("0")
             # print(j)
             my_dict['source'] = entry['_id']
             my_dict['token'] = j[0]
