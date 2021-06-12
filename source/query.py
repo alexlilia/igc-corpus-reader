@@ -1,8 +1,10 @@
-from elasticsearch import Elasticsearch
+from re import RegexFlag
+from elasticsearch import Elasticsearch, helpers
 from elasticsearch_dsl import Search
 from sys import argv
 import csv
-import re
+import regex
+import datetime
 
 MAX_RES=15
 
@@ -18,32 +20,41 @@ if __name__=="__main__":
         "size": MAX_RES, 
         "query": { 
             "regexp": { 
-                "text": ".*%s.*" % query }
-                },
+                "text": '.*%s.*' % query }
+                }
         }
+
     res = es.search(dsl,
         index="bin",
+        request_timeout=30)
+    
+    all_results = helpers.scan(client=es,
+        query=dsl,
+        index="bin",
         scroll='1h')
-
-    my_dict = dict()
-
+    
     print("Got %d hits" % res['hits']['total']['value'])
     print("Displaying maximally %u results:" % MAX_RES)
     for i, hit in enumerate(res['hits']['hits']):
-        j = re.search(f"\w+{query}\w+",hit["_source"]["text"]).group(0)
+        j = regex.search('\w*%s\w*' % query, hit["_source"]["text"], flags=regex.UNICODE)
         print("%u:\t%s:\t%s" % (i+1,j,hit["_source"]["text"]))
 
-    my_dict = {}
-    with open(f"{query}.csv","w",encoding="UTF-8") as f:
-        header_present  = False
-        for hit in res['hits']['hits']:
-            j = re.search(f"\w+{query}\w+",hit["_source"]["text"]).group(0).split("0")
-            my_dict['source'] = hit['_id']
+    my_dict = dict()
+    date = datetime.datetime.now().strftime("%Y%m%d_%I%M%S%p")
+
+    with open(f"{query}_{date}.csv","w",encoding="UTF-8") as f:
+        header_present  = False 
+        for entry in all_results:
+            # print(entry)
+            j = regex.search('\w*%s\w*' % query, entry["_source"]["text"], flags=regex.UNICODE).group(0).split("0")
+            # print(j)
+            my_dict['source'] = entry['_id']
             my_dict['token'] = j[0]
             my_dict['lemma'] = j[1]
             my_dict['tag'] = j[2]
-            
-            print(my_dict)
+            # print(regex.search('\w*%s\w*' % query, entry["_source"]["text"], flags=regex.UNICODE))
+
+            # print(my_dict)
             if not header_present:
                 w = csv.DictWriter(f, my_dict.keys())
                 w.writeheader()
