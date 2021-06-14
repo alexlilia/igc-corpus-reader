@@ -62,7 +62,7 @@ def main(argv):
         
         for dict in create_csv_format():
             total_matches += 1
-            print(dict,file=f)
+            print(dict["source"],file=f)
 
             if total_matches >= max_matches:
                 return
