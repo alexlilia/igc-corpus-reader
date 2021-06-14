@@ -38,7 +38,8 @@ def main(argv):
     print("Got %d hits" % res['hits']['total']['value'])
     print("Displaying maximally %u results:" % MAX_RES)
     for i, hit in enumerate(res['hits']['hits']):
-        j = regex.search('[\w\S]*%s[\w\S]*' % query, hit["_source"]["text"], flags=regex.UNICODE|regex.IGNORECASE)
+        j = regex.search('[\w\S]*%s[\w\S]*' % query, hit["_source"]["text"], 
+                         flags=regex.UNICODE|regex.IGNORECASE)
         print("%u:\t%s:\t%s" % (i+1,j,hit["_source"]["text"]))
 
 
@@ -61,4 +62,5 @@ def main(argv):
             print(dict,file=f)
 
 if __name__=="__main__":
-    cProfile.run("main(argv)")
+#    cProfile.run("main(argv)")
+    main(argv)
