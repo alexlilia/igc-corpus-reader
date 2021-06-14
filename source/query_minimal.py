@@ -14,6 +14,8 @@ def main(argv):
     es = Elasticsearch()
 
     query = argv[1]
+    max_matches = int(argv[2])
+
     print("Query:",query)
 
     # dsl = {"track_total_hits":True, "size": MAX_RES, "query": {"regexp": { "text": ".*%s.*" % query }}}
@@ -55,11 +57,15 @@ def main(argv):
     date = datetime.datetime.now().strftime("%Y%m%d_%I%M%S%p")
 
     with open(f"{query}_{date}.csv","w",encoding="UTF-8") as f:
-
+        total_matches = 0
         header_present = False
         
         for dict in create_csv_format():
+            total_matches += 1
             print(dict,file=f)
+
+            if total_matches >= max_matches:
+                return
 
 if __name__=="__main__":
 #    cProfile.run("main(argv)")
