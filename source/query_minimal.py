@@ -64,7 +64,7 @@ def main(argv):
             total_matches += 1
             print(dict["source"],file=f)
 
-            if total_matches >= max_matches:
+            if max_matches > 0 and total_matches >= max_matches:
                 return
 
 if __name__=="__main__":
