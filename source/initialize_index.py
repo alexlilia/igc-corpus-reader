@@ -67,7 +67,7 @@ def gendata():
     for doc in DOCS:
         yield doc
 
-def build_elasticsearch(zip_fn,corpus_json):
+def build_elasticsearch(zip_fn,corpus_json,max_sent_len):
 
     with ZipFile(zip_fn,'r') as zip_file:
         filenames = zip_file.namelist()
@@ -155,7 +155,8 @@ def build_elasticsearch(zip_fn,corpus_json):
                     doc = etree_to_dicts(doc)
                     for i, s in enumerate(doc):
 #                        id = "%s@%u" % (doc_id,i)
-                        sents.append(s)
+                        if s['text'].count(" ") + 1 < max_sent_len:
+                            sents.append(s)
 #                        ids.append(id)
 #                        if not es.exists(index="bin",id=id):
                             
@@ -186,9 +187,11 @@ def build_elasticsearch(zip_fn,corpus_json):
 parser = argparse.ArgumentParser()
 parser.add_argument("--corpus_json", type=str)
 parser.add_argument("--zip_file", type=str)
+parser.add_argument("--max_sent_len", type=int)
 args = parser.parse_args()
 
 if __name__ == "__main__":
     build_elasticsearch(zip_fn=args.zip_file,
-                        corpus_json=args.corpus_json)
+                        corpus_json=args.corpus_json,
+                        max_sent_len=args.max_sent_len)
     print("done")
